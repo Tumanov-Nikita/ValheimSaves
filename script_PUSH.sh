@@ -1,3 +1,4 @@
+git switch "main"
 git status
 sleep 2
 git add Baldur.db

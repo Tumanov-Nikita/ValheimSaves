@@ -1,4 +1,4 @@
-git checkout "Village"
+git switch "Village"
 git status
 sleep 2
 git add Triniti.db

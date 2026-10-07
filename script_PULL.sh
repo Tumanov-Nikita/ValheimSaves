@@ -40,3 +40,4 @@ git stash apply;;
 * )  echo "Введен некорректный ответ";
 sleep 1.5;;
 esac
+sleep 10

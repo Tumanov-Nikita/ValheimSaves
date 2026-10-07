@@ -5,7 +5,6 @@ read -p "Выберите ветку сейвов мира, введите ег�
 " answer
 case $answer in
 "1") 
-git stash save
 git switch "main";
 git fetch;
 git checkout -- Baldur.db;
@@ -14,10 +13,8 @@ git checkout -- Baldur.fwl;
 git checkout -- Baldur.fwl.old;
 git checkout -- script_PULL.sh;
 git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
+git pull;;
 "2")
-git stash save
 git switch "Village";
 git fetch;
 git checkout -- Triniti.db;
@@ -26,17 +23,14 @@ git checkout -- Triniti.fwl;
 git checkout -- Triniti.fwl.old;
 git checkout -- script_PULL.sh;
 git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
+git pull;;
 "3")
-git stash save
 git switch "World_1";
 git fetch;
 git checkout -- World_1;
 git checkout -- script_PULL.sh;
 git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
+git pull;;
 * )  echo "Введен некорректный ответ";
 sleep 1.5;;
 esac

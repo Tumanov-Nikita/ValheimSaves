@@ -5,6 +5,7 @@ git add Baldur.db
 git add Baldur.db.old
 git add Baldur.fwl
 git add Baldur.fwl.old
+git add World_1
 git add script_PULL.sh
 git add script_PUSH.sh
 git commit -m "updated_state_$(date +"%d/%m/%y_%T" )"

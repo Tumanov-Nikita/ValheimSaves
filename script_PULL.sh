@@ -1,6 +1,7 @@
 read -p "Выберите ветку сейвов мира, введите его номер и нажмите Enter:
 1) Мир Baldur
 2) Мир Triniti
+3) Мир World_1
 " answer
 case $answer in
 "1") 
@@ -23,6 +24,15 @@ git checkout -- Triniti.db;
 git checkout -- Triniti.db.old;
 git checkout -- Triniti.fwl;
 git checkout -- Triniti.fwl.old;
+git checkout -- script_PULL.sh;
+git checkout -- script_PUSH.sh;
+git pull;
+git stash apply;;
+"3")
+git stash save
+git switch "World_1";
+git fetch;
+git checkout -- World_1;
 git checkout -- script_PULL.sh;
 git checkout -- script_PUSH.sh;
 git pull;

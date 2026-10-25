@@ -5,40 +5,37 @@ read -p "Выберите ветку сейвов мира, введите ег�
 " answer
 case $answer in
 "1") 
-git stash save
-git switch "main";
-git fetch;
-git checkout -- Baldur.db;
-git checkout -- Baldur.db.old;
-git checkout -- Baldur.fwl;
-git checkout -- Baldur.fwl.old;
-git checkout -- script_PULL.sh;
-git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
+	git switch "main";
+	git fetch;
+	git checkout -- Baldur.db;
+	git checkout -- Baldur.db.old;
+	git checkout -- Baldur.fwl;
+	git checkout -- Baldur.fwl.old;
+	git checkout -- script_PULL.sh;
+	git checkout -- script_PUSH.sh;
+	git pull;;
 "2")
-git stash save
-git switch "Village";
-git fetch;
-git checkout -- Triniti.db;
-git checkout -- Triniti.db.old;
-git checkout -- Triniti.fwl;
-git checkout -- Triniti.fwl.old;
-git checkout -- script_PULL.sh;
-git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
+	git switch "Village";
+	git fetch;
+	git checkout -- Triniti.db;
+	git checkout -- Triniti.db.old;
+	git checkout -- Triniti.fwl;
+	git checkout -- Triniti.fwl.old;
+	git checkout -- script_PULL.sh;
+	git checkout -- script_PUSH.sh;
+	git pull;;
 "3")
-git stash save
-git switch "World_1";
-git fetch;
-git checkout -- World_1;
-git checkout -- script_PULL.sh;
-git checkout -- script_PUSH.sh;
-git pull;
-git stash apply;;
-* )  echo "Введен некорректный ответ";
-sleep 1.5;;
+	git switch "World_1"
+	git fetch
+	git reset --hard HEAD
+	git checkout -- World_1
+	git checkout -- script_PULL.sh
+	git checkout -- script_PUSH.sh
+	git pull
+	;;
+* )
+	echo "Введен некорректный ответ";
+	sleep 1.5;;
 esac
 echo "Работа скрипта завершена, окно закроется автоматически через 5 секунд"
 sleep 5;

@@ -25,17 +25,13 @@ case $answer in
 	git checkout -- script_PUSH.sh;
 	git pull;;
 "3")
-	git switch "World_1"
-	git fetch
-	git reset --hard HEAD
-	git checkout -- World_1
-	git checkout -- script_PULL.sh
-	git checkout -- script_PUSH.sh
-	git pull
+	git switch "World_1" || { echo "Не удалось переключиться на ветку"; break; }
+    git fetch origin
+    git reset --hard origin/World_1
+    git clean -fd
 	;;
 * )
 	echo "Введен некорректный ответ";
-	sleep 1.5;;
 esac
 echo "Работа скрипта завершена, окно закроется автоматически через 5 секунд"
 sleep 5;
